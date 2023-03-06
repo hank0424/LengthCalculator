@@ -10,8 +10,17 @@
         <Button x:Name="btnALLClear" Content="清除" HorizontalAlignment="Left" Margin="27,27,0,0" VerticalAlignment="Top" Width="147" Height="56" FontSize="24"/>
         <Label Content="公分" HorizontalAlignment="Left" Margin="27,105,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
         <TextBox x:Name="txtCM" HorizontalAlignment="Left" Height="46" Margin="27,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.184,0.195" FontSize="24" KeyUp="txtCM_KeyUp"/>
-        <Label Content="公分" HorizontalAlignment="Left" Margin="27,105,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
         <Label Content="公尺" HorizontalAlignment="Left" Margin="284,105,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
         <TextBox x:Name="txtM" HorizontalAlignment="Left" Height="46" Margin="284,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.184,0.195" FontSize="24"/>
+        <Label Content="英吋" HorizontalAlignment="Left" Margin="27,210,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
+        <TextBox x:Name="txtIn" HorizontalAlignment="Left" Height="46" Margin="27,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.184,0.195" FontSize="24" KeyUp="txtCM_KeyUp"/>
+        <Label Content="英呎" HorizontalAlignment="Left" Margin="284,210,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
+        <TextBox x:Name="txtFt" HorizontalAlignment="Left" Height="46" Margin="284,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.184,0.195" FontSize="24"/>
+        <Label Content="公里" HorizontalAlignment="Left" Margin="537,105,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
+        <TextBox x:Name="txtKM" HorizontalAlignment="Left" Height="46" Margin="537,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.184,0.195" FontSize="24"/>
+        <Label Content="碼&#xD;&#xA;" HorizontalAlignment="Left" Margin="537,210,0,0" VerticalAlignment="Top" Height="40" Width="90" FontSize="24"/>
+        <TextBox x:Name="txtYard" HorizontalAlignment="Left" Height="46" Margin="537,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" RenderTransformOrigin="0.184,0.195" FontSize="24"/>
+        <Label Content="說明文字" HorizontalAlignment="Left" Margin="128,345,0,0" VerticalAlignment="Top" Height="40" Width="111" FontSize="24" RenderTransformOrigin="-0.303,1.167"/>
+        <TextBox x:Name="txtInfo" HorizontalAlignment="Left" Height="46" Margin="239,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="295" RenderTransformOrigin="0.184,0.195" FontSize="24"/>
     </Grid>
 </Window>
