@@ -25,7 +25,9 @@ namespace LengthCalculator
             InitializeComponent();
         }
         string strInput;
+        string strInput2;
         double douOutput;
+        double dop;
         private void caculateAnswer(int _kind, double _value)
         {
             if (_kind != 0)
@@ -41,6 +43,23 @@ namespace LengthCalculator
             if (_kind != 5)
                 txtYard.Text = string.Format("{0:0.##########}", _value / 91.44);
         }
+        private void wei(int _kind, double _value)
+        {
+            if (_kind != 6)
+                txtMG.Text = string.Format("{0:0.##########}", _value);
+            if (_kind != 7)
+                txtG.Text = string.Format("{0:0.##########}", _value / 1000);
+            if (_kind != 8)
+                txtKG.Text = string.Format("{0:0.##########}", _value / 1000000);
+            if (_kind != 9)
+                txtT.Text = string.Format("{0:0.##########}", _value / 1000000000);
+            if (_kind != 10)
+                txtOZ.Text = string.Format("{0:0.##########}", _value / 500000);
+            if (_kind != 11)
+                txtB.Text = string.Format("{0:0.##########}", _value / 28571.42857);
+        }
+        
+           
         private void txtCM_KeyUp(object sender, KeyEventArgs e)
         {
             strInput = txtCM.Text;
@@ -115,7 +134,7 @@ namespace LengthCalculator
         {
             strInput = txtYard.Text;
 
-            if (double.TryParse(strInput, out douOutput) ==true)
+            if (double.TryParse(strInput, out douOutput) == true)
             {
                 caculateAnswer(5, douOutput * 91.44);
             }
@@ -123,6 +142,84 @@ namespace LengthCalculator
             {
                 txtInfo.Text = "請輸入數字";
                 txtYard.Text = "";
+            }
+        }
+        private void txtMG_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput2 = txtMG.Text;
+            if (double.TryParse(strInput2, out dop) == true)
+            {
+                wei(6, dop);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtMG.Text = "";
+            }
+        }
+        private void txtG_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput2 = txtG.Text;
+            if (double.TryParse(strInput2, out dop) == true)
+            {
+              wei(7, dop* 1000);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtG.Text = "";
+            }
+        }
+        private void txtKG_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput2 = txtKG.Text;
+            if (double.TryParse(strInput2, out dop) == true)
+            {
+               wei(8, dop*1000000);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtKG.Text = "";
+            }
+        }
+        private void txtT_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput2 = txtT.Text;
+            if (double.TryParse(strInput2, out dop) == true)
+            {
+                wei(9, dop* 1000000000);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtT.Text = "";
+            }
+        }
+        private void txtOZ_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput2 = txtOZ.Text;
+            if (double.TryParse(strInput2, out dop) == true)
+            {
+                wei(10, dop* 500000);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtOZ.Text = "";
+            }
+        }
+        private void txtB_KeyUp(object sender, KeyEventArgs e)
+        {
+            strInput2 = txtB.Text;
+            if (double.TryParse(strInput2, out dop) == true)
+            {
+                wei(11, dop* 28571.42857);
+            }
+            else
+            {
+                txtInfo.Text = "請輸入數字";
+                txtB.Text = "";
             }
         }
         private void btnALLClear_Click(object sender, RoutedEventArgs e)
@@ -133,10 +230,17 @@ namespace LengthCalculator
             txtIn.Text = "";
             txtFt.Text = "";
             txtYard.Text = "";
+
+            txtMG.Text = "";
+            txtG.Text = "";
+            txtKG.Text = "";
+            txtT.Text = "";
+            txtOZ.Text = "";
+            txtB.Text = "";
         }
 
     }
-    }
+}
 
       
    
